@@ -1,0 +1,26 @@
+#This display.html file under UserRegProject1/templates folder
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> User Registration Form </title>
+</head>
+<body>
+<h2>All User Details</h2>
+<table>
+    {% for UserRegModel in UsersKey %}
+    <tr>
+        <td><b>UserName:</b>{{ UserRegModel.username }}</td>
+        <td><b>Email ID:</b> {{ UserRegModel.emailid }}</td>
+        <td><b>Password1:</b> {{ UserRegModel.password1 }}</td>
+        <td><b>Password2:</b> {{ UserRegModel.password2 }}</td>
+        <td><b>MailSent:</b> {{ UserRegModel.mailsent }}</td>
+    </tr>
+    <tr>
+    <td colspan="2" class="divider"><hr/></td>
+</tr>
+    {% endfor %}
+</table>
+</body>
+</html>

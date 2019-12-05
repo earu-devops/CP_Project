@@ -1,0 +1,21 @@
+#This userdetails.html file under UserRegProject1/templates folder
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form - Title </title>
+</head>
+<body>
+<h2>User Registration Form</h2>
+
+<form action="/display/" method="post">
+    {% csrf_token %}
+    <table>
+    {{FormKey.as_table}}
+
+ </table>
+<input type="submit" value="Submit" />
+</form>
+</body>
+</html>
